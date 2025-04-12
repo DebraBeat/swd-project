@@ -5,10 +5,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SQLConnectExample {
-   static final String DB_URL = "jdbc:mysql://localhost:3306/sms_ritter";
+   static final String DB_URL = "jdbc:mysql://localhost:3306/swd_company_db";
    static final String USER = "root";
    static final String PASS = "root";
-   static final String QUERY = "SELECT course_id, course_name FROM courses";
+   static final String QUERY = "SELECT * FROM Employees";
 
    public static void main(String[] args) {
       // Open a connection
@@ -20,11 +20,10 @@ public class SQLConnectExample {
              // Retrieve by column name
 //             System.out.print("ID: " + rs.getInt("id"));
 //             System.out.print(", Age: " + rs.getInt("age"));
-//             System.out.print(", First: " + rs.getString("first"));
-//             System.out.println(", Last: " + rs.getString("last"));
-        	  System.out.println("Course_ID: " + rs.getInt("course_id"));
+             System.out.print("First name: " + rs.getString("first_name"));
+             System.out.print(", Lastname : " + rs.getString("last_name"));
+             System.out.println(", Employee_ID: " + rs.getInt("emp_id"));
           }
-        System.out.println("done");
       } catch (SQLException e) {
          e.printStackTrace();
       }
