@@ -45,11 +45,11 @@
 Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
 
 ### EmployeeBuilder
-This class provides a way to create an instance of the ```Employee``` class using the builder design pattern.
+This class provides a way to create an instance of the `Employee` class using the builder design pattern.
 The advantage of the builder pattern is that some attributes of the class can be empty, and although not implemented in our program, we can set defaults if needed.
 
 ### PaymentBuilder
-Similar to how ```Employee``` is implemented, this class provides a way to create an instance of the ```Payment``` class using the builder design pattern.
+Similar to how `Employee` is implemented, this class provides a way to create an instance of the `Payment` class using the builder design pattern.
 
 ## Strategy Pattern
 

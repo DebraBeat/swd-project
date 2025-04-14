@@ -32,8 +32,7 @@ public class EmployeeTest {
 		    	        			  employeeID, firstName, lastName, ssn, jobTitle,
 		    	        			  division, salary, hireDate).build();
 		    	        	  
-		    	        	  System.out.println(exampleEmployee.getFirstName()
-		    	        			  + ' ' + exampleEmployee.getLastName());
+		    	        	  System.out.println(exampleEmployee.asString());
 		    	          }
 		    	      } catch (SQLException e) {
 		    	         e.printStackTrace();

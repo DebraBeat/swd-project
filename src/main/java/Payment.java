@@ -4,6 +4,13 @@ public class Payment {
 	private String paymentDate;
 	private int amount;
 	
+	public Payment(Payment.PaymentBuilder paymentBuilder) {
+		this.paymentID = paymentBuilder.paymentID;
+		this.employeeID = paymentBuilder.employeeID;
+		this.paymentDate = paymentBuilder.paymentDate;
+		this.amount = paymentBuilder.amount;
+	}
+	
 	public int getPaymentID() {
 		return paymentID;
 	}
@@ -20,11 +27,11 @@ public class Payment {
 		return amount;
 	}
 	
-	public Payment(Payment.PaymentBuilder paymentBuilder) {
-		this.paymentID = paymentBuilder.paymentID;
-		this.employeeID = paymentBuilder.employeeID;
-		this.paymentDate = paymentBuilder.paymentDate;
-		this.amount = paymentBuilder.amount;
+	public String asString() {
+		return this.getPaymentID() + ' '
+				+ this.getEmployeeID() + ' '
+				+ this.getPaymentDate() + ' '
+				+ this.getAmount();
 	}
 	
 	public static class PaymentBuilder {

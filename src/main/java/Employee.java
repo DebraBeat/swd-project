@@ -12,6 +12,17 @@ public class Employee {
 	
 	// Make sure this is formatted as DateTime
 	private String hireDate;
+	
+	public Employee(Employee.EmployeeBuilder employeeBuilder) {
+		this.employeeID = employeeBuilder.employeeID;
+		this.firstName = employeeBuilder.firstName;
+		this.lastName = employeeBuilder.lastName;
+		this.ssn  = employeeBuilder.ssn;	
+		this.jobTitle = employeeBuilder.jobTitle;
+		this.division = employeeBuilder.division;
+		this.salary = employeeBuilder.salary;
+		this.hireDate = employeeBuilder.hireDate;
+	}
 
 	public int getEmployeeID() {
 		return employeeID;
@@ -45,16 +56,15 @@ public class Employee {
 		return hireDate;
 	}
 	
-	public Employee(Employee.EmployeeBuilder employeeBuilder) {
-		// TODO Auto-generated constructor stub
-		this.employeeID = employeeBuilder.employeeID;
-		this.firstName = employeeBuilder.firstName;
-		this.lastName = employeeBuilder.lastName;
-		this.ssn  = employeeBuilder.ssn;	
-		this.jobTitle = employeeBuilder.jobTitle;
-		this.division = employeeBuilder.division;
-		this.salary = employeeBuilder.salary;
-		this.hireDate = employeeBuilder.hireDate;
+	public String asString() {
+		return this.getEmployeeID() + ' '
+  			  + this.getFirstName() + ' '
+  			  + this.getLastName() + ' '
+  			  + this.getSsn() + ' '
+  			  + this.getJobTitle() + ' '
+  			  + this.getDivision() + ' '
+  			  + this.getSalary() + ' '
+  			  + this.getHireDate();
 	}
 	
 	public static class EmployeeBuilder {
