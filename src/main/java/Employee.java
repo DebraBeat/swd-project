@@ -50,7 +50,7 @@ public class Employee {
 		this.employeeID = employeeBuilder.employeeID;
 		this.firstName = employeeBuilder.firstName;
 		this.lastName = employeeBuilder.lastName;
-		this.ssn  = employeeBuilder.ssn;
+		this.ssn  = employeeBuilder.ssn;	
 		this.jobTitle = employeeBuilder.jobTitle;
 		this.division = employeeBuilder.division;
 		this.salary = employeeBuilder.salary;

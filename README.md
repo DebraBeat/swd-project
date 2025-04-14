@@ -9,6 +9,11 @@
 	* salary DECIMAL(10, 2),
 	* hire_date DATE
 * Payments Table
+	* payment_id INT auto_increment primary KEY,
+	* emp_id int,
+	* payment_date date,
+	* amount int,
+	* foreign key (emp_id) references Employees(emp_id)
 
 # Outline of Project with design patterns
 * Builder pattern uses:
@@ -37,13 +42,14 @@
 		* SSN verification should be private method
 
 ## Builder Pattern
+Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
+
 ### EmployeeBuilder
 This class provides a way to create an instance of the ```Employee``` class using the builder design pattern.
 The advantage of the builder pattern is that some attributes of the class can be empty, and although not implemented in our program, we can set defaults if needed.
 
-Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
-
 ### PaymentBuilder
+Similar to how ```Employee``` is implemented, this class provides a way to create an instance of the ```Payment``` class using the builder design pattern.
 
 ## Strategy Pattern
 
