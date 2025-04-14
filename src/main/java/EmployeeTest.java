@@ -28,8 +28,6 @@ public class EmployeeTest {
 		    	        	  // hireDate is of type String intentionally
 		    	        	  String hireDate = rs.getString("hire_date");
 		    	        	  
-		    	        	  System.out.println(firstName + ' ' + lastName);
-		    	        	  
 		    	        	  Employee exampleEmployee = new Employee.EmployeeBuilder(
 		    	        			  employeeID, firstName, lastName, ssn, jobTitle,
 		    	        			  division, salary, hireDate).build();
