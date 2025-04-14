@@ -1,4 +1,5 @@
 public class Employee {
+	private int employeeID;
 	private String firstName;
 	private String lastName;
 	
@@ -16,6 +17,10 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
+	public int getEmployeeID() {
+		return employeeID;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -45,6 +50,7 @@ public class Employee {
 	}
 	
 	public static class EmployeeBuilder {
+		private int employeeID;
 		private String firstName;
 		private String lastName;
 		
@@ -58,8 +64,10 @@ public class Employee {
 		// Make sure this is formatted as DateTime
 		private String hireDate;
 
-		public EmployeeBuilder(String firstName, String lastName, String ssn, String jobTitle, String division,
+		public EmployeeBuilder(int employeeID, String firstName, 
+				String lastName, String ssn, String jobTitle, String division,
 				double salary, String hireDate) {
+			this.employeeID = employeeID;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.ssn = ssn;
@@ -67,6 +75,10 @@ public class Employee {
 			this.division = division;
 			this.salary = salary;
 			this.hireDate = hireDate;
+		}
+		
+		public void setEmployeeID(int employeeID) {
+			this.employeeID = employeeID;
 		}
 
 		public void setFirstName(String firstName) {

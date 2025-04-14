@@ -1,5 +1,13 @@
 # Outline of Database Schema
 * Employee Table
+	* emp_id INT AUTO_INCREMENT PRIMARY KEY,
+	* first_name VARCHAR(100),
+	* last_name VARCHAR(100),
+	* ssn VARCHAR(9),  -- No dashes, only numbers
+	* job_title VARCHAR(100),
+	* division VARCHAR(100),
+	* salary DECIMAL(10, 2),
+	* hire_date DATE
 * Payments Table
 
 # Outline of Project with design patterns
