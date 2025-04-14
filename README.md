@@ -37,7 +37,16 @@
 		* SSN verification should be private method
 
 ## Builder Pattern
+### EmployeeBuilder
+This class provides a way to create an instance of the ```Employee``` class using the builder design pattern.
+The advantage of the builder pattern is that some attributes of the class can be empty, and although not implemented in our program, we can set defaults if needed.
+
+Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
+
+### PaymentBuilder
+
 ## Strategy Pattern
+
 ## Singleton Pattern
 ### SSN Validation:
 This module provides a clean and reusable way to validate Social Security Numbers (SSNs) using Java. It’s built around two key ideas: an interface that defines the rules for validation, and a singleton class that does the actual work.
