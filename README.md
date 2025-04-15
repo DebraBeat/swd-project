@@ -59,6 +59,13 @@ Similar to how `Employee` is implemented, this class provides a way to create an
 ## Strategy Pattern
 Reference: https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial
 
+### NameStrategy
+Implements `SearchStrategy` to search through the `Employees` table and `Payments` table by employee name.
+### SSNStrategy
+Implements `SearchStrategy` to search through the `Employees` table and `Payments` table by employee SSN.
+### EmployeeIDStrategy
+Implements `SearchStrategy` to search through the `Employees` table and `Payments` table by employee ID.
+
 ## Singleton Pattern
 ### SSN Validation:
 This module provides a clean and reusable way to validate Social Security Numbers (SSNs) using Java. It’s built around two key ideas: an interface that defines the rules for validation, and a singleton class that does the actual work.
