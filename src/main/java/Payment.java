@@ -28,9 +28,9 @@ public class Payment {
 	}
 	
 	public String asString() {
-		return this.getPaymentID() + ' '
-				+ this.getEmployeeID() + ' '
-				+ this.getPaymentDate() + ' '
+		return this.getPaymentID() + " "
+				+ this.getEmployeeID() + " "
+				+ this.getPaymentDate() + " "
 				+ this.getAmount();
 	}
 	

@@ -58,12 +58,12 @@ public class Employee {
 	
 	public String asString() {
 		return this.getEmployeeID() + " "
-  			  + this.getFirstName() + ' '
-  			  + this.getLastName() + ' '
-  			  + this.getSsn() + ' '
-  			  + this.getJobTitle() + ' '
-  			  + this.getDivision() + ' '
-  			  + this.getSalary() + ' '
+  			  + this.getFirstName() + " "
+  			  + this.getLastName() + " "
+  			  + this.getSsn() + " "
+  			  + this.getJobTitle() + " "
+  			  + this.getDivision() + " "
+  			  + this.getSalary() + " "
   			  + this.getHireDate();
 	}
 	
