@@ -22,7 +22,6 @@
 
 * Strategy pattern uses:
 	* Reports:
-		* Full-time employee information with pay statement history. 
 		* Total pay for month by job title.
 		* Total pay for month by Division. 
 
@@ -43,8 +42,8 @@
 * Facade pattern uses:
 	* Change employee table; add column SSN (no dashes).
 
-	* Update employee data:
-		* SSN verification should be private method
+	* Reports:
+		* Full-time employee information with pay statement history. 
 
 ## Builder Pattern
 Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
