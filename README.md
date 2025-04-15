@@ -33,7 +33,12 @@
 		
 * Singleton pattern uses:
 	* SSN Validation Pattern
+
 	* Date Validation Pattern
+
+	* Update
+		* Generically update employee data
+		* Update employee's salary for an increase of a particular percentage only for a salary amount range. E.G., 3.2% for salary greater than, equal to 58K but less than 105K. 
 
 * Facade pattern uses:
 	* Change employee table; add column SSN (no dashes).
@@ -52,6 +57,7 @@ The advantage of the builder pattern is that some attributes of the class can be
 Similar to how `Employee` is implemented, this class provides a way to create an instance of the `Payment` class using the builder design pattern.
 
 ## Strategy Pattern
+Reference: https://www.digitalocean.com/community/tutorials/strategy-design-pattern-in-java-example-tutorial
 
 ## Singleton Pattern
 ### SSN Validation:

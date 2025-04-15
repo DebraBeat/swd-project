@@ -57,7 +57,7 @@ public class Employee {
 	}
 	
 	public String asString() {
-		return this.getEmployeeID() + ' '
+		return this.getEmployeeID() + " "
   			  + this.getFirstName() + ' '
   			  + this.getLastName() + ' '
   			  + this.getSsn() + ' '
