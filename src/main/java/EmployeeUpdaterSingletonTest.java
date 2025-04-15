@@ -149,6 +149,15 @@ public class EmployeeUpdaterSingletonTest {
 		employeeList = EIDTester.employeeSearch("5");
 		System.out.println(employeeList.get(0).asString());
 		
+		// Testing range
+		if (employeeList.size() > 0) {
+			Employee employee = employeeList.get(0);
+			employeeUpdater.updateSalaryPercentRange(employee, 3.2, 58000.0, 58000.0);
+		}
+		
+		employeeList = EIDTester.employeeSearch("5");
+		System.out.println(employeeList.get(0).asString());
+		
 		// For changing it back we just do it generically
 		if (employeeList.size() > 0) {
 			Employee employee = employeeList.get(0);

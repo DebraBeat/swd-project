@@ -108,7 +108,10 @@ public class EmployeeUpdaterSingleton {
 		double oldSalary = employee.getSalary();
 		
 		// Only update salaries that fall into the specified range
-		if (oldSalary < lowerBound || oldSalary >= upperBound) return;
+		if (oldSalary < lowerBound || oldSalary >= upperBound) {
+			System.out.println("Salary is not in range.");
+			return;
+		}
 		
 		// Percent increase logic.
 		// 1) Multiple percent by 1/100 to scale to 100%. I.E. 3.2% scales to 0.032
