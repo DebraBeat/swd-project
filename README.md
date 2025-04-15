@@ -67,6 +67,10 @@ Implements `SearchStrategy` to search through the `Employees` table and `Payment
 Implements `SearchStrategy` to search through the `Employees` table and `Payments` table by employee ID.
 
 ## Singleton Pattern
+Reference: https://refactoring.guru/design-patterns/singleton/java/example
+
+### Update Employee
+
 ### SSN Validation:
 This module provides a clean and reusable way to validate Social Security Numbers (SSNs) using Java. It’s built around two key ideas: an interface that defines the rules for validation, and a singleton class that does the actual work.
 
