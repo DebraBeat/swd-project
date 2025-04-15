@@ -1,15 +1,22 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class StrategyTest {
 
 	public static void main(String[] args) {
-		Employee employee = null;
+		List<Employee> employeeList = new ArrayList<>();
 		NameStrategy nameTester = new NameStrategy();
 		SSNStrategy ssnTester = new SSNStrategy();
 		
-		employee = nameTester.search("John Doe", "Employees");
-		System.out.println(employee.asString());
+		employeeList = nameTester.employeeSearch("John Doe");
+		for (Employee employee : employeeList) {
+			System.out.println(employee.asString());
+		}
 		
-		employee = ssnTester.search("111223344", "Employees");
-		System.out.println(employee.asString());
+		employeeList = ssnTester.employeeSearch("111223344");
+		for (Employee employee : employeeList) {
+			System.out.println(employee.asString());
+		}
 	}
 
 }

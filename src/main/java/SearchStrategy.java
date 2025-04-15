@@ -1,3 +1,7 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public interface SearchStrategy {
-	public Employee search(String input, String tableName);
+	public List<Employee> employeeSearch(String input);
+	public List<Payment> paymentSearch(String input);
 }

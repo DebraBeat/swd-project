@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+import java.util.ArrayList;
 
 public class NameStrategy implements SearchStrategy {
 	static final String DB_URL = "jdbc:mysql://localhost:3306/swd_company_db";
@@ -13,13 +15,13 @@ public class NameStrategy implements SearchStrategy {
 	}
 	
 	@Override
-	public Employee search(String input, String tableName) {
-		Employee employee = null;
-		String[] fullName = input.trim().split(" ");
+	public List<Employee> employeeSearch(String name) {
+		List<Employee> employeeList = new ArrayList<>();
+		String[] fullName = name.trim().split(" ");
 		
 		String firstName = fullName[0];
 		String lastName = fullName[1];
-		String query = "SELECT * FROM " + tableName + " WHERE first_name = \"" + 
+		String query = "SELECT * FROM Employees WHERE first_name = \"" + 
 		firstName + "\" AND last_name = \"" + lastName + "\";";
 		
 		try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
@@ -38,15 +40,20 @@ public class NameStrategy implements SearchStrategy {
 	        	  // hireDate is of type String intentionally
 	        	  String hireDate = rs.getString("hire_date");
 	        	  
-	        	  employee = new Employee.EmployeeBuilder(
+	        	  Employee employee = new Employee.EmployeeBuilder(
 	        			  employeeID, employeeFirstName, employeeLastName, ssn, jobTitle,
 	        			  division, salary, hireDate).build();
-	        	  employee.asString();
+	        	  
+	        	  employeeList.add(employee);
 	          }
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		return employee;
+		return employeeList;
+	}
+	
+	// TODO: Get employeeId from Name, then search by employeeID
+	public List<Payment> paymentSearch(String input) {
+		return null;
 	}
 }
