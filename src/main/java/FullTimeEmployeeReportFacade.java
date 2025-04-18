@@ -19,7 +19,7 @@ public class FullTimeEmployeeReportFacade {
 		EmployeeIDStrategy employeeIDSearch = new EmployeeIDStrategy();
 		employeeList = employeeIDSearch.employeeSearch("*");
 		
-		System.out.println("*".repeat(100));
+		System.out.println("*".repeat(120));
 		
 		for (Employee e : employeeList) {
 			System.out.println("Payment history for " + e.getFirstName() + " " + e.getLastName());
