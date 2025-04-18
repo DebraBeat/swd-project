@@ -6,6 +6,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is a class for searching for an employee by their employee ID.
+ * 
+ * @author Debra Ritter
+ */
 public class EmployeeIDStrategy implements SearchStrategy {
 	static final String DB_URL = "jdbc:mysql://localhost:3306/swd_company_db";
 	static final String USER = "root";
