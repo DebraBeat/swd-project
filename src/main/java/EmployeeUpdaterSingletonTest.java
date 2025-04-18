@@ -1,6 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Tester class for EmployeeUpdaterSingleton
+ * TODO: Write more test cases corresponding to 5a and 5b project deliverables.
+ * 
+ * @author Debra Ritter
+ */
 public class EmployeeUpdaterSingletonTest {
 
 	public static void main(String[] args) {
