@@ -42,7 +42,8 @@
 
 * Facade pattern uses:
 	* Reports:
-		* Full-time employee information with pay statement history. 
+		* Full-time employee information with pay statement history.
+    	* Update employees salary for all salaries less than an amount.
 
 ## Builder Pattern
 Reference: https://www.digitalocean.com/community/tutorials/builder-design-pattern-in-java
@@ -80,4 +81,9 @@ Anything else gets flagged as invalid—like misplaced dashes or non-numeric cha
 
 - If you're looking to plug in validation somewhere or just want to see how interfaces and singletons work together in Java, this is a good, lightweight example. Check out the SSNValidatorTest class to see how to use it.
 
+### Add SSN No Dashses Column
+
 ## Facade Pattern
+
+### Full Time Employee Report Facade
+### Update All Employee Salary Range Facade
