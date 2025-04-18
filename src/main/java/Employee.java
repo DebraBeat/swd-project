@@ -57,14 +57,15 @@ public class Employee {
 	}
 	
 	public String asString() {
-		return this.getEmployeeID() + " "
-  			  + this.getFirstName() + " "
-  			  + this.getLastName() + " "
-  			  + this.getSsn() + " "
-  			  + this.getJobTitle() + " "
-  			  + this.getDivision() + " "
-  			  + this.getSalary() + " "
-  			  + this.getHireDate();
+		return "EmployeeID: " + this.getEmployeeID() +
+  			  " First Name: " + this.getFirstName() +
+  			  " Last Name: "+ this.getLastName() +
+  			  "\n" +
+  			  "Phone Number: " + this.getSsn() +
+  			  " Job Title: " + this.getJobTitle() +
+  			  " Division: "+ this.getDivision() +
+  			  " Salary: "+ this.getSalary() +
+  			  " Hire Date: "+ this.getHireDate();
 	}
 	
 	public static class EmployeeBuilder {

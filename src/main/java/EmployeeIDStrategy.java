@@ -23,7 +23,14 @@ public class EmployeeIDStrategy implements SearchStrategy {
 	@Override
 	public List<Employee> employeeSearch(String employeeID) {
 		List<Employee> employeeList = new ArrayList<>();
-		String query = "SELECT * FROM Employees WHERE emp_id = \"" + employeeID + "\";";
+		String query = "";
+		// For search all employees vs a single employee
+		if (employeeID.equals("*")) {
+			// Difference is the use of quotes in the query
+			query = "SELECT * FROM Employees;";
+		} else {
+			query = "SELECT * FROM Payments WHERE emp_id = \"" + employeeID + "\";";
+		}
 		
 		try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 		         Statement stmt = conn.createStatement();
@@ -53,7 +60,7 @@ public class EmployeeIDStrategy implements SearchStrategy {
 		return employeeList;
 	}
 
-	//employeeID is of type String intentionally
+	// employeeID is of type String intentionally
 	@Override
 	public List<Payment> paymentSearch(String employeeID) {
 		List<Payment> paymentList = new ArrayList<>();
