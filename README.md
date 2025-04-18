@@ -37,11 +37,10 @@
 
 	* Update
 		* Generically update employee data
-		* Update employee's salary for an increase of a particular percentage only for a salary amount range. E.G., 3.2% for salary greater than, equal to 58K but less than 105K. 
-
-* Facade pattern uses:
+		* Update employee's salary for an increase of a particular percentage only for a salary amount range. E.G., 3.2% for salary greater than, equal to 58K but less than 105K.
 	* Change employee table; add column SSN (no dashes).
 
+* Facade pattern uses:
 	* Reports:
 		* Full-time employee information with pay statement history. 
 
