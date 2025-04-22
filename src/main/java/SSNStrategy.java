@@ -7,10 +7,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class SSNStrategy implements SearchStrategy {
-	static final String DB_URL = "jdbc:mysql://localhost:3306/swd_company_db";
-	static final String USER = "root";
-	static final String PASS = "root";
-	
 	public SSNStrategy() {
 	}
 	
