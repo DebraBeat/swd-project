@@ -29,7 +29,7 @@ public class EmployeeIDStrategy implements SearchStrategy {
 			// Difference is the use of quotes in the query
 			query = "SELECT * FROM Employees;";
 		} else {
-			query = "SELECT * FROM Payments WHERE emp_id = \"" + employeeID + "\";";
+			query = "SELECT * FROM Employees WHERE emp_id = " + employeeID + ";";
 		}
 		
 		try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);

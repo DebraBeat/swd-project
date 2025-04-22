@@ -60,6 +60,7 @@ public class Employee {
 		return "EmployeeID: " + this.getEmployeeID() +
   			  " First Name: " + this.getFirstName() +
   			  " Last Name: "+ this.getLastName() +
+  			  " SSN: " + this.getSsn() + 
   			  "\n" +
   			  "Phone Number: " + this.getSsn() +
   			  " Job Title: " + this.getJobTitle() +

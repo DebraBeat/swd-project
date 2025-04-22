@@ -16,7 +16,7 @@ public class TotalPayByMonthTester {
 		divisionInstance.getTotalPayByMonth("November");
 		
 		// Test case: lower case
-		divisionInstance.getTotalPayByMonth("November");
+		divisionInstance.getTotalPayByMonth("november");
 	}
 
 }
